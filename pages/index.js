@@ -170,13 +170,13 @@ const ContactItem = ({ icon: Icon, text, href }) => (
 );
 
 const SkillItem = ({ skill }) => (
-  <div className="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-600 rounded-lg hover:border-blue-300 dark:hover:border-blue-500 transition-colors duration-300">
+  <div className="flex items-center gap-3 py-2">
     <div className="flex-shrink-0">
-      <skill.icon size={20} className="text-blue-600 dark:text-blue-400" />
+      <skill.icon size={18} className="text-blue-600 dark:text-blue-400" />
     </div>
     <div className="flex-grow">
-      <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100">{skill.name}</h3>
-      <p className="text-xs text-gray-500 dark:text-gray-400">{skill.category}</p>
+      <span className="text-gray-900 dark:text-gray-100 font-medium">{skill.name}</span>
+      <span className="text-gray-500 dark:text-gray-400 text-sm ml-2">• {skill.category}</span>
     </div>
   </div>
 );
