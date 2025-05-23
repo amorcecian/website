@@ -1,5 +1,9 @@
 import Layout from '../components/Layout';
-import { Mail, Phone, MapPin, Linkedin, Github, Globe } from 'lucide-react';
+import { 
+  Mail, Phone, MapPin, Linkedin, Github, Globe, 
+  Database, Code, Cloud, Server, BarChart, 
+  Workflow, Zap, GitBranch, Settings
+} from 'lucide-react';
 
 const resumeData = {
   name: "Aram Christian Morcecian",
@@ -11,9 +15,28 @@ const resumeData = {
   },
   summary: "Experienced Data Architect with over a decade in IT and 5 years specializing in data engineering. Expertise in building scalable cloud data infrastructures and driving data-driven decisions through innovative analytics solutions.",
   skills: [
-    "SQL", "Python", "AWS", "GCP", "Azure", "Serverless Computing", "Event Streaming", 
-    "AWS Kinesis", "SQS", "SNS", "dbt", "AWS Glue Studio", "PDI", "Apache Airflow", 
-    "Kafka", "Snowflake", "Redshift", "BigQuery", "Power BI", "Tableau", "Terraform", "GitHub Actions"
+    { name: "SQL", icon: Database, category: "Database" },
+    { name: "Python", icon: Code, category: "Programming" },
+    { name: "AWS", icon: Cloud, category: "Cloud" },
+    { name: "GCP", icon: Cloud, category: "Cloud" },
+    { name: "Azure", icon: Cloud, category: "Cloud" },
+    { name: "Serverless Computing", icon: Zap, category: "Architecture" },
+    { name: "Event Streaming", icon: Workflow, category: "Data Engineering" },
+    { name: "AWS Kinesis", icon: Workflow, category: "Data Engineering" },
+    { name: "SQS", icon: Server, category: "Infrastructure" },
+    { name: "SNS", icon: Server, category: "Infrastructure" },
+    { name: "dbt", icon: Settings, category: "Data Engineering" },
+    { name: "AWS Glue Studio", icon: Settings, category: "Data Engineering" },
+    { name: "PDI", icon: Settings, category: "Data Engineering" },
+    { name: "Apache Airflow", icon: Workflow, category: "Data Engineering" },
+    { name: "Kafka", icon: Workflow, category: "Data Engineering" },
+    { name: "Snowflake", icon: Database, category: "Database" },
+    { name: "Redshift", icon: Database, category: "Database" },
+    { name: "BigQuery", icon: Database, category: "Database" },
+    { name: "Power BI", icon: BarChart, category: "Analytics" },
+    { name: "Tableau", icon: BarChart, category: "Analytics" },
+    { name: "Terraform", icon: Settings, category: "Infrastructure" },
+    { name: "GitHub Actions", icon: GitBranch, category: "DevOps" }
   ],
   experience: [
     {
@@ -146,6 +169,18 @@ const ContactItem = ({ icon: Icon, text, href }) => (
   </a>
 );
 
+const SkillItem = ({ skill }) => (
+  <div className="flex items-center gap-3 p-3 border border-gray-200 dark:border-gray-600 rounded-lg hover:border-blue-300 dark:hover:border-blue-500 transition-colors duration-300">
+    <div className="flex-shrink-0">
+      <skill.icon size={20} className="text-blue-600 dark:text-blue-400" />
+    </div>
+    <div className="flex-grow">
+      <h3 className="text-sm font-medium text-gray-900 dark:text-gray-100">{skill.name}</h3>
+      <p className="text-xs text-gray-500 dark:text-gray-400">{skill.category}</p>
+    </div>
+  </div>
+);
+
 export default function Home() {
   return (
     <Layout title={`${resumeData.name} | Data Architect & Engineer`}>
@@ -171,12 +206,10 @@ export default function Home() {
 
         {/* Skills Section */}
         <section className="mb-10">
-          <SectionTitle title="Skills" />
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <SectionTitle title="Technical Skills" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {resumeData.skills.map((skill) => (
-              <div key={skill} className="bg-gray-100 dark:bg-gray-700 p-3 rounded-md shadow-sm hover:shadow-md transition-shadow duration-300">
-                <span className="text-gray-700 dark:text-gray-300">{skill}</span>
-              </div>
+              <SkillItem key={skill.name} skill={skill} />
             ))}
           </div>
         </section>
