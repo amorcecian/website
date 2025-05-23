@@ -9,7 +9,7 @@ const Layout = ({ children, title = 'Aram Morcecian - Portfolio' }) => {
         <title>{title}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="./favicon.ico" />
       </Head>
       <header className="bg-gray-800 dark:bg-gray-900 text-white p-4 sticky top-0 z-50">
         <nav className="container mx-auto flex justify-between items-center">
