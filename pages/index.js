@@ -159,11 +159,11 @@ const resumeData = {
 };
 
 const SectionTitle = ({ title }) => (
-  <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-300 border-b-2 border-gray-300 dark:border-gray-600 pb-2 mb-6">{title}</h2>
+  <h2 className="text-2xl font-bold text-vercel-text dark:text-vercel-text-dark border-b-2 border-vercel-border dark:border-vercel-border-dark pb-2 mb-6">{title}</h2>
 );
 
 const ContactItem = ({ icon: Icon, text, href }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 mb-2 transition-colors duration-300">
+  <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-vercel-text dark:text-vercel-text-dark hover:text-vercel-accent dark:hover:text-vercel-accent-dark mb-2 transition-colors duration-300">
     <Icon size={16} />
     <span>{text}</span>
   </a>
@@ -172,11 +172,11 @@ const ContactItem = ({ icon: Icon, text, href }) => (
 const SkillItem = ({ skill }) => (
   <div className="flex items-center gap-3 py-2">
     <div className="flex-shrink-0">
-      <skill.icon size={18} className="text-blue-600 dark:text-blue-400" />
+      <skill.icon size={18} className="text-vercel-accent dark:text-vercel-accent-dark" />
     </div>
     <div className="flex-grow">
-      <span className="text-gray-900 dark:text-gray-100 font-medium">{skill.name}</span>
-      <span className="text-gray-500 dark:text-gray-400 text-sm ml-2">• {skill.category}</span>
+      <span className="text-vercel-text dark:text-vercel-text-dark font-medium">{skill.name}</span>
+      <span className="text-vercel-text dark:text-vercel-text-dark text-sm ml-2 opacity-75">• {skill.category}</span>
     </div>
   </div>
 );
@@ -184,9 +184,9 @@ const SkillItem = ({ skill }) => (
 export default function Home() {
   return (
     <Layout title={`${resumeData.name} | Data Architect & Engineer`}>
-      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 md:p-12">
+      <div className="bg-vercel-bg dark:bg-vercel-bg-dark text-vercel-text dark:text-vercel-text-dark shadow-lg rounded-lg p-8 md:p-12">
         {/* Header Section */}
-        <header className="text-center mb-10 border-b border-gray-200 dark:border-gray-700 pb-8">
+        <header className="text-center mb-10 border-b border-vercel-border dark:border-vercel-border-dark pb-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
             <div className="flex-shrink-0">
               <img
@@ -194,17 +194,17 @@ export default function Home() {
                 alt="Aram Christian Morcecian"
                 width={180}
                 height={180}
-                className="rounded-full shadow-lg border-4 border-gray-200 dark:border-gray-600"
+                className="rounded-full shadow-lg border-4 border-vercel-border dark:border-vercel-border-dark"
               />
             </div>
             <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white">{resumeData.name}</h1>
+              <h1 className="text-4xl md:text-5xl font-bold text-vercel-text dark:text-vercel-text-dark">{resumeData.name}</h1>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-items-center text-sm mt-6">
             <ContactItem icon={Phone} text={resumeData.contact.phone} href={`tel:${resumeData.contact.phone}`} />
             <ContactItem icon={Mail} text={resumeData.contact.email} href={`mailto:${resumeData.contact.email}`} />
-            <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+            <div className="flex items-center gap-2 text-vercel-text dark:text-vercel-text-dark">
               <MapPin size={16} />
               <span>{resumeData.contact.location}</span>
             </div>
@@ -214,7 +214,7 @@ export default function Home() {
 
         {/* Summary Section */}
         <section className="mb-10">
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">{resumeData.summary}</p>
+          <p className="text-lg text-vercel-text dark:text-vercel-text-dark leading-relaxed">{resumeData.summary}</p>
         </section>
 
         {/* Skills Section */}
@@ -231,22 +231,22 @@ export default function Home() {
         <section className="mb-10">
           <SectionTitle title="Work Experience" />
           {resumeData.experience.map((job, index) => (
-            <div key={index} className="mb-8 p-6 bg-gray-50 dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{job.company}</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">{job.period}</p>
-              {job.title && <h4 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-3">{job.title}</h4>}
+            <div key={index} className="mb-8 p-6 bg-opacity-50 bg-gray-100 dark:bg-opacity-50 dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 text-vercel-text dark:text-vercel-text-dark">
+              <h3 className="text-xl font-semibold text-vercel-text dark:text-vercel-text-dark">{job.company}</h3>
+              <p className="text-sm text-vercel-text dark:text-vercel-text-dark opacity-75 mb-1">{job.period}</p>
+              {job.title && <h4 className="text-lg font-medium text-vercel-accent dark:text-vercel-accent-dark mb-3">{job.title}</h4>}
               {job.responsibilities && (
-                <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 pl-4">
+                <ul className="list-disc list-inside text-vercel-text dark:text-vercel-text-dark space-y-1 pl-4">
                   {job.responsibilities.map((responsibility, i) => (
                     <li key={i}>{responsibility}</li>
                   ))}
                 </ul>
               )}
               {job.roles && job.roles.map((role, roleIndex) => (
-                <div key={roleIndex} className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
-                   <h4 className="text-lg font-medium text-blue-600 dark:text-blue-400 mb-1">{role.title}</h4>
-                   <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{role.period}</p>
-                   <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1 pl-4">
+                <div key={roleIndex} className="mt-4 pt-4 border-t border-vercel-border dark:border-vercel-border-dark">
+                   <h4 className="text-lg font-medium text-vercel-accent dark:text-vercel-accent-dark mb-1">{role.title}</h4>
+                   <p className="text-sm text-vercel-text dark:text-vercel-text-dark opacity-75 mb-2">{role.period}</p>
+                   <ul className="list-disc list-inside text-vercel-text dark:text-vercel-text-dark space-y-1 pl-4">
                     {role.responsibilities.map((responsibility, i) => (
                         <li key={i}>{responsibility}</li>
                     ))}
@@ -261,10 +261,10 @@ export default function Home() {
         <section className="mb-10">
           <SectionTitle title="Education" />
           {resumeData.education.map((edu, index) => (
-            <div key={index} className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{edu.degree}</h3>
-              <p className="text-gray-600 dark:text-gray-400">{edu.institution}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{edu.year}</p>
+            <div key={index} className="mb-6 p-4 bg-opacity-50 bg-gray-100 dark:bg-opacity-50 dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 text-vercel-text dark:text-vercel-text-dark">
+              <h3 className="text-lg font-semibold text-vercel-text dark:text-vercel-text-dark">{edu.degree}</h3>
+              <p className="text-vercel-text dark:text-vercel-text-dark opacity-75">{edu.institution}</p>
+              <p className="text-sm text-vercel-text dark:text-vercel-text-dark opacity-75">{edu.year}</p>
             </div>
           ))}
         </section>
@@ -273,9 +273,9 @@ export default function Home() {
         <section>
           <SectionTitle title="Certifications" />
           {resumeData.certifications.map((cert, index) => (
-            <div key={index} className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{cert.name}</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{cert.date}</p>
+            <div key={index} className="mb-6 p-4 bg-opacity-50 bg-gray-100 dark:bg-opacity-50 dark:bg-gray-700 rounded-lg shadow hover:shadow-lg transition-shadow duration-300 text-vercel-text dark:text-vercel-text-dark">
+              <h3 className="text-lg font-semibold text-vercel-text dark:text-vercel-text-dark">{cert.name}</h3>
+              <p className="text-sm text-vercel-text dark:text-vercel-text-dark opacity-75">{cert.date}</p>
             </div>
           ))}
         </section>
