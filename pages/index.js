@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import Image from 'next/image';
 import { 
   Mail, Phone, MapPin, Linkedin, Github, Globe, 
   Database, Code, Cloud, Server, BarChart, 
@@ -187,7 +188,21 @@ export default function Home() {
       <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 md:p-12">
         {/* Header Section */}
         <header className="text-center mb-10 border-b border-gray-200 dark:border-gray-700 pb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-3">{resumeData.name}</h1>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
+            <div className="flex-shrink-0">
+              <Image
+                src="/profile.jpg"
+                alt="Aram Christian Morcecian"
+                width={180}
+                height={180}
+                className="rounded-full shadow-lg border-4 border-gray-200 dark:border-gray-600"
+                priority
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white">{resumeData.name}</h1>
+            </div>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-items-center text-sm mt-6">
             <ContactItem icon={Phone} text={resumeData.contact.phone} href={`tel:${resumeData.contact.phone}`} />
             <ContactItem icon={Mail} text={resumeData.contact.email} href={`mailto:${resumeData.contact.email}`} />
