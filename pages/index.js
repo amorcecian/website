@@ -1,5 +1,4 @@
 import Layout from '../components/Layout';
-import Image from 'next/image';
 import { 
   Mail, Phone, MapPin, Linkedin, Github, Globe, 
   Database, Code, Cloud, Server, BarChart, 
@@ -190,13 +189,12 @@ export default function Home() {
         <header className="text-center mb-10 border-b border-gray-200 dark:border-gray-700 pb-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
             <div className="flex-shrink-0">
-              <Image
-                src="/profile.jpg"
+              <img
+                src={`${process.env.NODE_ENV === 'production' ? '/website' : ''}/profile.jpg`}
                 alt="Aram Christian Morcecian"
                 width={180}
                 height={180}
                 className="rounded-full shadow-lg border-4 border-gray-200 dark:border-gray-600"
-                priority
               />
             </div>
             <div className="text-center md:text-left">
