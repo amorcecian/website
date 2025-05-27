@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  // Only apply basePath and assetPrefix in production (for GitHub Pages)
-  basePath: process.env.NODE_ENV === 'production' ? '/website' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/website' : '',
+  // Remove basePath and assetPrefix for custom domain deployment
+  // Only use them if deploying to username.github.io/repository-name
   trailingSlash: true,
   images: {
     unoptimized: true
