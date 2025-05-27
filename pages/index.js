@@ -190,7 +190,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
             <div className="flex-shrink-0">
               <img
-                src={`${process.env.NODE_ENV === 'production' ? '/website' : ''}/profile.jpg`}
+                src="/profile.jpg"
                 alt="Aram Christian Morcecian"
                 width={180}
                 height={180}
