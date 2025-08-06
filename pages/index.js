@@ -2,7 +2,7 @@ import Layout from '../components/Layout';
 import { 
   Mail, Phone, MapPin, Linkedin, Github, Globe, 
   Database, Code, Cloud, Server, BarChart, 
-  Workflow, Zap, GitBranch, Settings
+  Workflow, Zap, GitBranch, Settings, Brain
 } from 'lucide-react';
 
 const resumeData = {
@@ -13,13 +13,17 @@ const resumeData = {
     location: "Buenos Aires, Argentina",
     linkedin: "http://linkedin.com/in/aram-morcecian",
   },
-  summary: "Experienced Data Architect with over a decade in IT and 5 years specializing in data engineering. Expertise in building scalable cloud data infrastructures and driving data-driven decisions through innovative analytics solutions.",
+  summary: "Experienced Data Architect with 10 + years in IT and 7 years focusing on data engineering. Proven track record of designing cloud-native, scalable data platforms and enabling data-driven decisions. Recently, I have led AI initiatives—including Retrieval-Augmented Generation (RAG) and agent-based LangChain solutions—that deliver conversational analytics and personalized digital-health coaching. Passionate about uniting modern data architecture with applied AI to unlock business value faster.",
   skills: [
     { name: "SQL", icon: Database, category: "Database" },
     { name: "Python", icon: Code, category: "Programming" },
     { name: "AWS", icon: Cloud, category: "Cloud" },
     { name: "GCP", icon: Cloud, category: "Cloud" },
     { name: "Azure", icon: Cloud, category: "Cloud" },
+    { name: "RAG", icon: Brain, category: "AI" },
+    { name: "LangChain", icon: Brain, category: "AI" },
+    { name: "Prompt Engineering", icon: Brain, category: "AI" },
+    { name: "Vector Databases", icon: Brain, category: "AI" },
     { name: "Serverless Computing", icon: Zap, category: "Architecture" },
     { name: "Event Streaming", icon: Workflow, category: "Data Engineering" },
     { name: "AWS Kinesis", icon: Workflow, category: "Data Engineering" },
@@ -47,6 +51,8 @@ const resumeData = {
         "Led the design and maintenance of AWS-based data infrastructure.",
         "Led cross-functional teams in data integration projects across Marketing, Product, and Analytics.",
         "Developed Python APIs and AWS Glue pipelines (Python and PySpark) for data integration.",
+        "Built a Natural‑Language‑to‑Analytics application with LangChain agentic workflows that converts user questions into SQL, executes against Snowflake, and returns visualizations or narratives, cutting ad‑hoc BI requests by 40 %.",
+        "Participated in the design and rollout of Coach Iris, an LLM‑powered digital health coach using a Retrieval‑Augmented Generation (RAG) architecture; boosted weekly patient engagement by 25 %.",
         "Developed ETL jobs using dbt.",
         "Implemented serverless architecture solutions using AWS Lambda and API Gateway.",
         "Designed scalable analytics architecture in Snowflake.",
