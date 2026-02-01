@@ -3,8 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  # Do NOT deploy on pull requests. Build will still run for PRs via CI workflow.
+#  pull_request:
+#    branches: [ main ]
 
 permissions:
   contents: read
