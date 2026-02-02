@@ -44,6 +44,19 @@ const resumeData = {
   ],
   experience: [
     {
+      company: "Leeo Insurance",
+      period: "11/2025 – 02/2026",
+      title: "Data Engineer",
+      responsibilities: [
+        "Built and maintained ETL pipelines to ingest and transform insurance data for analytics and reporting.",
+        "Worked with data engineers and analysts to design reliable data models and schemas.",
+        "Implemented automated data quality checks and monitoring.",
+        "Optimized SQL queries and Spark jobs for performance and cost-efficiency.",
+        "Developed dbt models and CI pipelines to ensure reliable transformations and promote modular, testable data code.",
+        "Tuned AWS resources (EC2, RDS, Glue, and S3) and implemented cost-optimization strategies for ETL workloads.",
+      ],
+    },
+    {
       company: "Allurion Technologies",
       period: "08/2021 – Present",
       title: "Senior Data Engineer – Technical Lead",
