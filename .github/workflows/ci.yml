@@ -16,7 +16,14 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint || true
-      - name: Build
+      - name: Build (produces static export when output: 'export' in next.config)
         run: npm run build
-      - name: Export static
-        run: npm run export
+      - name: List exported files
+        run: |
+          echo "Listing output directory"
+          ls -la out || ls -la .next || true
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-export
+          path: out
