@@ -58,7 +58,7 @@ const resumeData = {
     },
     {
       company: "Allurion Technologies",
-      period: "08/2021 – Present",
+      period: "08/2021 – 08/2025",
       title: "Senior Data Engineer – Technical Lead",
       responsibilities: [
         "Led the design and maintenance of AWS-based data infrastructure.",
