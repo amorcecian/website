@@ -49,9 +49,9 @@ const resumeData = {
       title: "Data Engineer",
       responsibilities: [
         "Built and maintained ETL pipelines to ingest and transform insurance data for analytics and reporting.",
-        "Worked with data engineers and analysts to design reliable data models and schemas.",
+        "Worked with data analysts to design reliable data models and schemas.",
         "Implemented automated data quality checks and monitoring.",
-        "Optimized SQL queries and Spark jobs for performance and cost-efficiency.",
+        "Optimized SQL queries for performance and cost-efficiency.",
         "Developed dbt models and CI pipelines to ensure reliable transformations and promote modular, testable data code.",
         "Tuned AWS resources (EC2, RDS, Glue, and S3) and implemented cost-optimization strategies for ETL workloads.",
       ],
