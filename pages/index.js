@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import { trackGoal, goalFromHref } from '../components/analytics';
 import { 
   Mail, Phone, MapPin, Linkedin, Github, Globe, 
   Database, Code, Cloud, Server, BarChart, 
@@ -182,7 +183,7 @@ const SectionTitle = ({ title }) => (
 );
 
 const ContactItem = ({ icon: Icon, text, href }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-vercel-text dark:text-vercel-text-dark hover:text-vercel-accent dark:hover:text-vercel-accent-dark mb-2 transition-colors duration-300">
+  <a href={href} target="_blank" rel="noopener noreferrer" onClick={() => trackGoal(goalFromHref(href))} className="flex items-center gap-2 text-vercel-text dark:text-vercel-text-dark hover:text-vercel-accent dark:hover:text-vercel-accent-dark mb-2 transition-colors duration-300">
     <Icon size={16} />
     <span>{text}</span>
   </a>
