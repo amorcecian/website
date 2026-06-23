@@ -13,7 +13,7 @@ const resumeData = {
     location: "Buenos Aires, Argentina",
     linkedin: "http://linkedin.com/in/aram-morcecian",
   },
-  summary: "Experienced Data Architect with 10 + years in IT and 7 years focusing on data engineering. Proven track record of designing cloud-native, scalable data platforms and enabling data-driven decisions. Recently, I have led AI initiatives—including Retrieval-Augmented Generation (RAG) and agent-based LangChain solutions—that deliver conversational analytics and personalized digital-health coaching. Passionate about uniting modern data architecture with applied AI to unlock business value faster.",
+  summary: "Senior Data & AI Engineer with 10+ years of hands-on experience administering databases, building cloud infrastructure on AWS/GCP, and engineering data pipelines at scale. Expert in SQL, data modeling, ETL/ELT design, and BI tooling. Recently expanded into AI/LLM engineering—building RAG systems, multi-agent workflows, and LLM-powered products in production. Proven communicator who bridges engineering, product, and analytics teams across global, async organizations.",
   skills: [
     { name: "SQL", icon: Database, category: "Database" },
     { name: "Python", icon: Code, category: "Programming" },
@@ -57,7 +57,7 @@ const resumeData = {
     {
       company: "Leeo Insurance",
       period: "11/2025 – 02/2026",
-      title: "Data Engineer",
+      title: "Senior Data Engineer (Contract)",
       responsibilities: [
         "Built and maintained ETL pipelines to ingest and transform insurance data for analytics and reporting.",
         "Worked with data analysts to design reliable data models and schemas.",
