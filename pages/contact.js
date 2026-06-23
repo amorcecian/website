@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Layout from '../components/Layout';
 import { Mail, Phone, MapPin, Linkedin, Send } from 'lucide-react';
+import { trackGoal } from '../components/analytics';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -31,7 +32,9 @@ export default function Contact() {
     );
     
     const mailtoLink = `mailto:amorcecian@gmail.com?subject=${subject}&body=${body}`;
-    
+
+    trackGoal('contact-form-submit');
+
     // Open mailto link
     window.location.href = mailtoLink;
     
@@ -71,8 +74,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                    <a 
-                      href="mailto:amorcecian@gmail.com" 
+                    <a
+                      href="mailto:amorcecian@gmail.com"
+                      onClick={() => trackGoal('email-click')}
                       className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       amorcecian@gmail.com
@@ -86,8 +90,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
-                    <a 
-                      href="tel:+5491169418682" 
+                    <a
+                      href="tel:+5491169418682"
+                      onClick={() => trackGoal('phone-click')}
                       className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       +54 911 6941 8682
@@ -111,10 +116,11 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">LinkedIn</p>
-                    <a 
-                      href="http://linkedin.com/in/aram-morcecian" 
-                      target="_blank" 
+                    <a
+                      href="http://linkedin.com/in/aram-morcecian"
+                      target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackGoal('linkedin-click')}
                       className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                     >
                       linkedin.com/in/aram-morcecian
