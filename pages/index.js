@@ -44,6 +44,17 @@ const resumeData = {
   ],
   experience: [
     {
+      company: "SnappyBits",
+      period: "02/2026 – Present",
+      title: "Senior Data & AI Engineer",
+      responsibilities: [
+        "Designing and building AWS-based ETL pipelines using Lambda Functions, API Gateway, Glue Jobs, Redshift, and SQL Server to support data-intensive client workflows.",
+        "Architected an account intelligence pipeline (multi-provider web search abstraction layer using Gemini + Google Search grounding, OpenAI, and Bright Data) deployed on AWS ECS via FastAPI; enables automated research and enrichment of B2B accounts at scale.",
+        "Built LLM-powered competitive intelligence tooling for MercadoLibre: real-time price monitoring, catalog scraping, and seller analytics using Claude and OpenAI APIs, Python, and PostgreSQL.",
+        "Designed multi-agent AI systems using Claude Code and Vertex AI (GCP); implemented RAG pipelines and prompt engineering patterns for document Q&A and structured data extraction workflows.",
+      ],
+    },
+    {
       company: "Leeo Insurance",
       period: "11/2025 – 02/2026",
       title: "Data Engineer",
