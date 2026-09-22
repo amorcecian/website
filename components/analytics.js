@@ -28,5 +28,8 @@ export function goalFromHref(href = '') {
   if (href.startsWith('mailto:')) return 'email-click'
   if (href.startsWith('tel:')) return 'phone-click'
   if (href.includes('linkedin.com')) return 'linkedin-click'
+  if (href.includes('dailycast.io')) return 'dailycast-click'
+  if (/(x|twitter)\.com\/[^/]+\/status\//.test(href)) return 'x-thread-click'
+  if (href.includes('x.com') || href.includes('twitter.com')) return 'x-profile-click'
   return 'outbound-click'
 }
