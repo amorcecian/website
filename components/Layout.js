@@ -35,7 +35,21 @@ const Layout = ({ children, title = 'Aram Morcecian - Portfolio' }) => {
         </div>
       </main>
       <footer className="bg-vercel-bg dark:bg-vercel-bg-dark text-vercel-text dark:text-vercel-text-dark text-center p-4 border-t border-vercel-border dark:border-vercel-border-dark">
-        <p>&copy; {new Date().getFullYear()} Aram Morcecian. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} QUERY LLC. All rights reserved.</p>
+        <p className="mt-1 text-sm opacity-70">
+          QUERY LLC is the company behind Aram Morcecian&apos;s mobile games and apps.
+        </p>
+        <p className="mt-2 text-sm flex justify-center gap-4">
+          <Link href="/apps/mahjong-marquee/" className="hover:text-vercel-accent dark:hover:text-vercel-accent-dark">
+            Apps
+          </Link>
+          <Link href="/support/" className="hover:text-vercel-accent dark:hover:text-vercel-accent-dark">
+            Support
+          </Link>
+          <Link href="/contact/" className="hover:text-vercel-accent dark:hover:text-vercel-accent-dark">
+            Contact
+          </Link>
+        </p>
       </footer>
     </>
   );
